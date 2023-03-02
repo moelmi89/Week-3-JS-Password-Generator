@@ -36,7 +36,17 @@ function generatePassword() {
   if (hasNumberChars)
   {
     chars.push (["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
-    }  }
+    }
+  
+  	if (isNaN(passLength) || (passLength < 8 || passLength > 120)) {
+      alert("Invalid password length!")
+      return false;
+    }
+  
+    if (chars.length===0){
+      alert("Please Select At Least One Character Type")
+      return false;
+    }}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
