@@ -46,7 +46,18 @@ function generatePassword() {
     if (chars.length===0){
       alert("Please Select At Least One Character Type")
       return false;
-    }}
+    }
+  
+    let password = "";
+    for (let i=0;i<passLength;i++){
+      let arrayIndex = Math.floor(Math.random() * chars.length);
+      let charIndex =  Math.floor(Math.random() * chars[arrayIndex].length);
+      password += chars[arrayIndex][charIndex];
+	}
+
+	return password;}
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+if (generateBtn) {
+	generateBtn.addEventListener("click", writePassword);
+};
