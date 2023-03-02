@@ -12,28 +12,14 @@ function writePassword() {
 }
 
 function generatePassword() {
-  var options = {
-    numberOfChars: 0,
-    hasLowerChars: false,
-    hasUpperChars: false,
-    hasSpecialChars: false,
-    hasNumberChars: false,
-  }
-}
+	var passLength = window.prompt("How many characters would you like in your password");
 
-  var passLength = 0;
-  passLength = confirm ("How many characters would you like in your password")
-  if (passLength < 8 || passLength > 120) {
-    alert("invalid password length!")
-    return;
-  }
+	const hasLowerChars = confirm("Would you like Lower case letters?");
+	const hasUpperChars = confirm("Would you like Upper case letters?");
+	const hasSpecialChars = confirm("Would you like Special characters letters?");
+	const hasNumberChars = confirm("Would you like numbers?");
 
-  var hasLowerChars = window.prompt("Would you like Lower case letters?")
-  var hasUpperChars = window.prompt("Would you like Upper case letters?")
-  var hasSpecialChars = window.prompt("Would you like Specail characters letters?")
-  var hasNumberChars = window.prompt("Would you like numbers?")
-
-  var chars = [];
+	const chars = [];
 
   if (hasLowerChars)
   {
@@ -50,7 +36,7 @@ function generatePassword() {
   if (hasNumberChars)
   {
     chars.push (["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"])
-  }
+    }  }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
