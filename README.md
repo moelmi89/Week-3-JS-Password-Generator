@@ -34,6 +34,8 @@ THEN the password is either displayed in an alert or written to the page
 <img src ="Screenshots\Pwd Gen sc2.png">
 <img src ="Screenshots\Pwd Gen sc3.png">
 
-# Link to DEployed Site
+# Link to Deployed Site
+
+https://moelmi89.github.io/Week-3-JS-Password-Generator/
 
 
